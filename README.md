@@ -25,3 +25,8 @@ npm install
 ```bash
 npm run dev
 ```
+
+## Assignment
+1. Create at least 5 custom Styled Components. 
+    - Example: Titles, Lists, etc...
+2. Use at least 5 ShadcnU components
