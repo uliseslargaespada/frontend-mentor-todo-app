@@ -1,6 +1,6 @@
 // Import the structured elements 
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "@components/layout/Header";
+import Footer from "@components/layout/Footer";
 
 // In JSX and React, when a function receives a param, we call it a prop
 /**

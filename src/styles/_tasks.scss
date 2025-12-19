@@ -2,8 +2,6 @@
  * Task-specific styles: new task form, task list, items.
  */
 
-@use "./variables" as *;
-
 /**
  * New task form: input + button inline.
  */
@@ -12,31 +10,6 @@
   gap: $space-sm;
   align-items: center;
   margin-bottom: $space-md;
-
-  input[type="text"] {
-    flex: 1;
-    padding: $space-sm $space-md;
-    border-radius: $radius-md;
-    border: 1px solid $color-border-soft;
-    background-color: $color-surface-soft;
-    color: $color-text-main;
-    font-size: 0.95rem;
-
-    &::placeholder {
-      color: $color-text-muted;
-    }
-
-    &:focus {
-      outline: none;
-      border-color: $color-accent;
-      box-shadow: 0 0 0 2px $color-accent-soft;
-    }
-
-    &:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-  }
 
   button[type="submit"] {
     min-width: 96px;

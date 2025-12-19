@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+// Custom components
+import Input from "@components/shared/input.component";
+
 /**
  * NewTaskForm lets the user add a new task.
  *
@@ -52,13 +55,14 @@ const NewTaskForm = ({ onAddTask }) => {
         Task title
       </label>
 
-      <input
+      <Input
         id="task-title"
         type="text"
         placeholder="Add a new task…"
         value={title}
         onChange={(event) => setTitle(event.target.value)}
         disabled={submitting}
+        className="flex-1"
       />
 
       <button type="submit" disabled={submitting || !title.trim()}>

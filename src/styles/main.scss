@@ -1,8 +1,9 @@
 /**
- * Root stylesheet for the Supabase Tasks app.
- * Imports variables, layout and task-specific styles.
+ * Custom SCSS styles for the app.
+ * Variables, layout and task-specific styles.
  */
 
-@use "./variables";
-@use "./layout";
-@use "./tasks";
+/* Custom styles */
+@import "./variables";
+@import "./layout";
+@import "./tasks";
