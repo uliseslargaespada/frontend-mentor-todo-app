@@ -1,10 +1,18 @@
 import Title from "@components/shared/Title.component";
 import { Button } from "@components/ui/button";
+import { useTheme } from "@hooks/useTheme";
 
 /**
  * Application header component.
  */
 export default function Header() {
+  const { theme, setTheme } = useTheme();
+  const isDark = theme === "dark";
+
+  const handleThemeChange = () => {
+    setTheme(isDark ? "light" : "dark");
+  };
+
   return (
     <header className="app-header">
       <Title>
@@ -13,8 +21,8 @@ export default function Header() {
       <p className="app-header__subtitle">
         Simple task list powered by Supabase, built with React + Vite.
       </p>
-      <Button variant="secondary">
-        Click Me
+      <Button variant="secondary" onClick={handleThemeChange}>
+        Change to {isDark ? "Light" : "Dark"} Mode
       </Button>
     </header>
   );
