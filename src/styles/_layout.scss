@@ -2,8 +2,6 @@
  * Global layout styles: body, shell, header, footer, card, utilities.
  */
 
-@use "./variables" as *;
-
 *,
 *::before,
 *::after {
@@ -19,9 +17,7 @@ body {
 
 body {
   font-family: $font-main;
-  background:
-    radial-gradient(circle at top, #111827 0, $color-bg 50%),
-    linear-gradient(180deg, #020617 0%, #020617 100%);
+  background: var(--background);
 }
 
 /**

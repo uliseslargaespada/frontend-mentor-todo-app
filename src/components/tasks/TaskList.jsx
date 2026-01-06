@@ -1,8 +1,7 @@
 import { useState, useMemo } from "react";
-import Spinner from 'react-bootstrap/Spinner';
-import TaskItem from "./TaskItem.jsx";
-import NewTaskForm from "./NewTaskForm.jsx";
-import { useTasks } from "../../hooks/useTasks.js";
+import TaskItem from "@components/tasks/TaskItem.jsx";
+import NewTaskForm from "@components/tasks/NewTaskForm.jsx";
+import { useTasks } from "@hooks/useTasks.js";
 
 /**
  * TaskList (Day 4):
@@ -116,7 +115,7 @@ function TaskList() {
       )}
       
       {loading ? (
-        <Spinner animation="border" />
+        <div>loading...</div>
       ) : (
         <ul className="task-list">
           {visibleTasks.map((task) => (

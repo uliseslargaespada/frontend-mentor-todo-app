@@ -1,5 +1,5 @@
-import MainLayout from "./components/layout/MainLayout.jsx";
-import TaskList from "./components/tasks/TaskList.jsx";
+import MainLayout from "@components/layout/MainLayout.jsx";
+import TaskList from "@components/tasks/TaskList.jsx";
 
 /**
  * Root App component.

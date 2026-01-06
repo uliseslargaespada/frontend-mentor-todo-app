@@ -1,3 +1,5 @@
+import CustomCheckbox from "@components/shared/Checkbox.component";
+
 /**
  * Displays a single task as a list item (read-only on Day 2).
  *
@@ -24,8 +26,7 @@ export default function TaskItem({ task, onToggleComplete, onDelete }) {
   return (
     <li className="task-item">
       <label className="task-item__content">
-        <input
-          type="checkbox"
+        <CustomCheckbox
           checked={task.is_complete}
           onChange={handleToggle}
         />
