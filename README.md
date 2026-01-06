@@ -26,7 +26,11 @@ npm install
 npm run dev
 ```
 
-## Assignment
+## Assignment - Week 5
 1. Create at least 5 custom Styled Components. 
     - Example: Titles, Lists, etc...
 2. Use at least 5 ShadcnU components
+
+## Assignments - Week 6
+1. Day 1
+Write unit tests for the remaining arithmetic operations. 
