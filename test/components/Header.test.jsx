@@ -11,7 +11,7 @@ import { expect, test } from 'vitest';
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import Header from "./Header.jsx";
+import Header from "@components/layout/Header";
 import { ThemeProvider } from '@/providers/themeProvider';
 import { STORAGE_KEY } from "@/constants/themeConstants.js";
 import { describe } from "vitest";
