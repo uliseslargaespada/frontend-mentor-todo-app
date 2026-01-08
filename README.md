@@ -34,3 +34,5 @@ npm run dev
 ## Assignments - Week 6
 1. Day 1
 Write unit tests for the remaining arithmetic operations. 
+2. Day 2
+Write unit tests for the Footer component.

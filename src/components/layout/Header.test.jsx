@@ -8,7 +8,7 @@
  */
 import React from "react";
 import { expect, test } from 'vitest';
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import Header from "./Header.jsx";
@@ -31,7 +31,7 @@ function renderHeaderWithTheme({ defaultTheme = 'dark', storedTheme = null}) {
 // Group tests in categories
 describe('Header', () => {
   test('renders title, subtitle, and the toggle button', async () => {
-    renderHeaderWithTheme({ defaultTheme: "dark "});
+    renderHeaderWithTheme({ defaultTheme: "dark"});
 
     // Check for the title
     expect(
@@ -45,12 +45,12 @@ describe('Header', () => {
 
     // Initial theme is dark -> button invites switching to Light Mode
     expect(
-      screen.getByText(/Change to Dark Mode/)
+      screen.getByText(/Change to Light Mode/)
     ).toBeInTheDocument();
 
-    // await waitFor(() => {
-    //   expect(document.documentElement).toHaveClass("dark");
-    // });
+    await waitFor(() => {
+      expect(document.documentElement).toHaveClass("dark");
+    });
   });
 
   test("toggles theme when clicking the button (dark -> light -> dark)", async () => {
@@ -59,9 +59,9 @@ describe('Header', () => {
     renderHeaderWithTheme({ defaultTheme: "dark" });
 
     // Wait for initial effect
-    // await waitFor(() => {
-    //   expect(document.documentElement).toHaveClass("dark");
-    // });
+    await waitFor(() => {
+      expect(document.documentElement).toHaveClass("dark");
+    });
 
     const toggleButton = screen.getByText(/Change to Light Mode/);
 
@@ -74,9 +74,9 @@ describe('Header', () => {
     ).toBeInTheDocument();
 
     // DOM side effect (ThemeProvider)
-    // await waitFor(() => {
-    //   expect(document.documentElement).not.toHaveClass("dark");
-    // });
+    await waitFor(() => {
+      expect(document.documentElement).not.toHaveClass("dark");
+    });
 
     // localStorage stores the selected theme value
     expect(localStorage.getItem(STORAGE_KEY)).toBe("light");
@@ -84,9 +84,9 @@ describe('Header', () => {
     // Click again -> back to dark
     await user.click(screen.getByText(/Change to Dark Mode/));
 
-    // await waitFor(() => {
-    //   expect(document.documentElement).toHaveClass("dark");
-    // });
+    await waitFor(() => {
+      expect(document.documentElement).toHaveClass("dark");
+    });
 
     expect(localStorage.getItem(STORAGE_KEY)).toBe("dark");
   });
