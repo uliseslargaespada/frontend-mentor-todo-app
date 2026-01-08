@@ -7,14 +7,13 @@
  * we verify what a user sees and what the app does to the DOM.
  */
 import React from "react";
-import { expect, test } from 'vitest';
+import { expect, test, describe } from 'vitest';
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import Header from "@components/layout/Header";
 import { ThemeProvider } from '@/providers/themeProvider';
 import { STORAGE_KEY } from "@/constants/themeConstants.js";
-import { describe } from "vitest";
 
 function renderHeaderWithTheme({ defaultTheme = 'dark', storedTheme = null}) {
   if (storedTheme) {
