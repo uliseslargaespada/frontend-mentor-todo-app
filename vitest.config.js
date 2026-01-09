@@ -26,5 +26,15 @@ export default defineConfig({
       "@test": path.resolve(__dirname, './test'),
       "@providers": path.resolve(__dirname, './src/providers')
     }
+  },
+  coverage: {
+    provider: "v8",
+    reporter: ["text", "json", "html"],
+    thresholds: {
+      lines: 50,
+      functions: 50,
+      branches: 40,
+      statements: 50
+    }
   }
 });
