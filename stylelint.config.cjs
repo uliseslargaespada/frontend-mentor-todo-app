@@ -31,5 +31,8 @@ module.exports = {
 
     // Skip scss/no-global-function-names
     "scss/no-global-function-names": null,
+
+    // Enforce prefix for class names
+    // "selector-class-pattern": "^(my-app)-[a-z0-9-]+$"
   }
 };

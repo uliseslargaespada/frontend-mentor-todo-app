@@ -1,4 +1,4 @@
-name: Linters
+name: Linters and Test
 
 on:
   push:
@@ -25,3 +25,6 @@ jobs:
 
       - name: Run linters
         run: npm run lint -- --max-warnings=0
+
+      - name: Run tests
+        run: npm run test:run

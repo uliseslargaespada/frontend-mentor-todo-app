@@ -21,7 +21,7 @@ export default function Header() {
       <p className="app-header__subtitle">
         Simple task list powered by Supabase, built with React + Vite.
       </p>
-      <Button variant="secondary" onClick={handleThemeChange}>
+      <Button variant="secondary" onClick={handleThemeChange} type="button" aria-label={`Change to ${isDark ? "Light" : "Dark"} Mode`}>
         Change to {isDark ? "Light" : "Dark"} Mode
       </Button>
     </header>

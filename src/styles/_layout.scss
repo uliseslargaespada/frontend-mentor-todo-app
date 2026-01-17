@@ -20,10 +20,13 @@ body {
   background: var(--background);
 }
 
+//Set up the prefix 
+$prefix: "app-";
+
 /**
  * Root app shell: centers content and controls width.
  */
-.app-shell {
+.#{$prefix}shell {
   max-width: 760px;
   margin: 0 auto;
   padding: $space-xl;
@@ -35,7 +38,7 @@ body {
 /**
  * Header: title and subtitle.
  */
-.app-header {
+.#{$prefix}header {
   margin-bottom: $space-xl;
 
   &__title {
