@@ -25,3 +25,6 @@ dist-ssr
 
 # Ignore all env files
 .env.local
+
+# Remove coverage folder
+coverage/

@@ -25,3 +25,6 @@ jobs:
 
       - name: Run linters
         run: npm run lint -- --max-warnings=0
+
+      - name: Run tests
+        run: npm test:run
